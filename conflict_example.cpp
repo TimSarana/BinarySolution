@@ -2,6 +2,6 @@
 
 namespace Test {
     void hello() {
-        std::cout << "Hello from main branch!" << std::endl;
+        std::cout << "Hello from MAIN branch (modified)!" << std::endl;  // ← ДРУГОЕ ИЗМЕНЕНИЕ!
     }
 }
