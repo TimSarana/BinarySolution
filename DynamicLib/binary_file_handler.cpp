@@ -1,12 +1,12 @@
 ﻿#include "binary_file_handler.h"
-#include "../StaticLib/binary_utils.h"  // ← ВОТ! БЕРЁМ ИЗ СТАТИЧЕСКОЙ БИБЛИОТЕКИ!
+#include "../StaticLib/binary_utils.h"  
 #include <cstdio>
 
 namespace BinaryIO {
     bool BinaryFileHandler::writeIntToFile(const char* filename, int value) {
         char buffer[4];
 
-        // ВОТ! ИСПОЛЬЗУЕМ ФУНКЦИЮ ИЗ СТАТИЧЕСКОЙ БИБЛИОТЕКИ!
+        
         serializeInt(value, buffer);
 
         FILE* file = nullptr;
@@ -28,7 +28,9 @@ namespace BinaryIO {
         fread(buffer, 1, 4, file);
         fclose(file);
 
-        // ВОТ! ИСПОЛЬЗУЕМ ФУНКЦИЮ ИЗ СТАТИЧЕСКОЙ БИБЛИОТЕКИ!
+       
         return deserializeInt(buffer);
     }
+
+
 }
