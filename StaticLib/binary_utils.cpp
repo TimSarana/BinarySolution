@@ -1,4 +1,4 @@
-// binary_utils.cpp
+#include <cstdio>
 #include "binary_utils.h"
 #include <cstring>
 
@@ -12,4 +12,7 @@ namespace BinaryIO {
         memcpy(&value, buffer, sizeof(int));
         return value;
     }
+
+
+
 }
