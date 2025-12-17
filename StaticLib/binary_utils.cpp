@@ -22,11 +22,10 @@ namespace BinaryIO {
        FILE* binaryFile = nullptr;
        FILE* textFile = nullptr;
 
-       // Открываем бинарный файл для чтения
        fopen_s(&binaryFile, binaryFilename, "rb");
        if (!binaryFile) return false;
 
-       // Открываем текстовый файл для записи
+       
        fopen_s(&textFile, textFilename, "w");
        if (!textFile) {
            fclose(binaryFile);
